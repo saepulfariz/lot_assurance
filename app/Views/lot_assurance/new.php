@@ -210,7 +210,7 @@
                                 <h3>TTD</h3>
                                 <input type="text" class="form-control" name="nama_foreman" placeholder="Nama Foreman">
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer text-end">
                                 <button class="btn btn-primary">Submit</button>
                                 <a href="<?= base_url('lot'); ?>" class="btn-secondary btn">Back</a>
                             </div>

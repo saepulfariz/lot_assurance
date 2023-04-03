@@ -76,12 +76,14 @@
                                             <td><?= $d['qty_roll']; ?></td>
                                             <td><?= $d['qty_metter']; ?></td>
                                             <td><?= $d['qty_lot_sc']; ?>/ <?= $d['qty_lot_f']; ?></td>
-                                            <td>Edit /
-                                                <form action='<?= base_url('list/' . $d['id_detail']); ?>' method='post' enctype='multipart/form-data'>
+                                            <td>
+                                                <a href="<?= base_url('lot/list/' . $d['id_detail']); ?>" class="btn btn-sm mb-2 btn-info">View</a>
+                                                <a href="<?= base_url('lot/list/' . $d['id_detail'] . '/edit'); ?>" class="btn btn-sm mb-2 btn-warning">Edit</a>
+                                                <form action='<?= base_url('lot/list/' . $d['id_detail']); ?>' method='post' enctype='multipart/form-data'>
                                                     <?= csrf_field(); ?>
                                                     <input type='hidden' name='_method' value='DELETE' />
                                                     <!-- GET, POST, PUT, PATCH, DELETE-->
-                                                    <button type='button' onclick="deleteTombol(this)" class='btn btn-sm btn-danger'>Delete</button>
+                                                    <button type='button' onclick="deleteTombol(this)" class='btn btn-sm btn-danger mb-2'>Delete</button>
                                                 </form>
 
 

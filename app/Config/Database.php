@@ -20,7 +20,8 @@ class Database extends Config
      * use if no other is specified.
      */
 
-    public string $defaultGroup = 'epul';
+    // public string $defaultGroup = 'epul';
+    public string $defaultGroup = 'local';
 
 
     /**

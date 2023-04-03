@@ -38,13 +38,13 @@
                                         <td><?= $d['machine']; ?></td>
                                         <td><?= $d['is_valid']; ?></td>
                                         <td>
-                                            <a href="<?= base_url('lot/' . $d['id_lot']); ?>">View</a> | <a href="<?= base_url('lot/' . $d['id_lot'] . '/edit'); ?>">Edit</a> |
+                                            <a href="<?= base_url('lot/' . $d['id_lot']); ?>" class="btn btn-sm mb-2 btn-info">View</a> <a href="<?= base_url('lot/' . $d['id_lot'] . '/edit'); ?>" class="btn btn-sm mb-2 btn-warning">Edit</a>
 
                                             <form action='<?= base_url('lot/' . $d['id_lot']); ?>' method='post' enctype='multipart/form-data'>
                                                 <?= csrf_field(); ?>
                                                 <input type='hidden' name='_method' value='DELETE' />
                                                 <!-- GET, POST, PUT, PATCH, DELETE-->
-                                                <button type='submit' class='btn btn-sm btn-danger del-tombol'>Delete</button>
+                                                <button type='submit' class='btn btn-sm mb-2 btn-danger del-tombol'>Delete</button>
                                             </form>
                                         </td>
                                     </tr>

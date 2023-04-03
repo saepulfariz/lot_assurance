@@ -33,14 +33,20 @@ $routes->set404Override();
 
 $routes->get('/', 'LotAssurance::index');
 
+$routes->view('/table', 'lot_assurance/table');
+
 
 // $routes->resource('lot/list', [
 //     'controller' => 'LotAssuranceDetail'
 // ]);
-$routes->delete('list/(:any)', 'LotAssuranceDetail::delete/$1');
+$routes->delete('lot/list/(:any)', 'LotAssuranceDetail::delete/$1');
 
+$routes->get('lot/list/(:num)', 'LotAssuranceDetail::show/$1');
 $routes->get('lot/list/(:num)/new', 'LotAssuranceDetail::new/$1');
+$routes->get('lot/list/(:num)/edit', 'LotAssuranceDetail::edit/$1');
 $routes->post('lot/list/(:num)', 'LotAssuranceDetail::create/$1');
+$routes->post('lot/list/(:num)', 'LotAssuranceDetail::create/$1');
+$routes->put('lot/list/(:any)', 'LotAssuranceDetail::update/$1');
 
 $routes->resource('lot', [
     'controller' => 'LotAssurance'
