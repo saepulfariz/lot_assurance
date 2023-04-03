@@ -15,7 +15,6 @@ class LotModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'id_lot',
         'nama',
         'date',
         'shift',
